@@ -11,7 +11,7 @@ provider "google" {
 
 resource "google_compute_instance" "app" {
   count        = var.instances_qty
-  name         = "docker-host${count.index + 1}"
+  name         = "docker-host-${count.index + 1}"
   machine_type = "n1-standard-1"
   zone         = var.zone
   tags         = ["docker-machine"]

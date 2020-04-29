@@ -39,8 +39,11 @@ docker-machine create --driver google \
     --direction=INGRESS
 ```
 
-**Задание со***
+**Первое задание со***
 
 * Описали различия в выводе команд `docker inspect container` и `docker inspect image` в файле `docker-1/log`
 
-**Задание с****
+**Второе задание с***
+
+* Описали создание инстансов с помощью `terraform`
+* Описали плейбуки ansible для установки `docker`

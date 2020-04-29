@@ -1,0 +1,13 @@
+---
+plugin: gcp_compute
+projects:
+  - docker-275604
+zones:
+  - europe-west1-b
+hostnames:
+  - public_ip # private_ip - вернет локальные адреса
+filters: []
+groups:
+  docker: "'docker-host-' in name"
+auth_kind: serviceaccount
+service_account_file: "../../docker-275604-8cd22bc2a519.json"
