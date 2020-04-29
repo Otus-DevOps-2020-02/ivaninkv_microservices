@@ -47,3 +47,4 @@ docker-machine create --driver google \
 
 * Описали создание инстансов с помощью `terraform`
 * Описали плейбуки ansible для установки `docker`
+* Описали файлы для создания образов с установленным `docker`'ом

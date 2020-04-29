@@ -1,0 +1,9 @@
+{
+    "project_id": "docker-275604",
+    "source_image_family": "ubuntu-1604-lts",
+    "image_description": "Image for homework 12",
+    "disk_size": "10",
+    "disk_type": "pd-standard",
+    "network": "default",
+    "tags": "docker-machine"
+}
