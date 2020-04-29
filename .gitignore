@@ -1,0 +1,9 @@
+# terraform
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+.terraform/
+*.retry
+
+# service account
+docker-275604-8cd22bc2a519.json
