@@ -43,7 +43,7 @@ docker-machine create --driver google \
 
 * Описали различия в выводе команд `docker inspect container` и `docker inspect image` в файле `docker-1/log`
 
-**Второе задание с***
+**Второе задание со***
 
 * Описали создание инстансов с помощью `terraform`
 * Описали плейбуки ansible для установки `docker`
@@ -58,6 +58,8 @@ docker-machine create --driver google \
 * Создали 3 докерфайла для различных компонентов сервиса
 * Собрали 3 образа, при сброке образа `ui`, использовался кэш
 * Создали bridge network для контейнеров, запустили их и проверили работоспособность сервиса
+* Пересоздали образ ui исользуя другой базовый образ, чтобы уменьшить размер образа
+* Подключили `docker volume` для сохранения данных после перезапуска контейнеров.
 
 **Первое задание со***
 
@@ -67,7 +69,7 @@ docker network create reddit
 docker run -d --network=reddit --network-alias=post_db --network-alias=comment_db mongo:latest
 docker run -d --network=reddit --network-alias=post const84/post:1.0
 docker run -d --network=reddit --network-alias=comment const84/comment:1.0
-docker run -d --network=reddit -p 9292:9292 const84/ui:1.0
+docker run -d --network=reddit -p 9292:9292 const84/ui:2.0
 ```
 
 Команда с передачей ENV, документация по [ссылке](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file):
@@ -84,5 +86,9 @@ docker run -d --network=reddit \
 docker run -d --network=reddit \
             --env POST_SERVICE_HOST=post1 \
             --env COMMENT_SERVICE_HOST=comment1 \
-            -p 9292:9292 const84/ui:1.0
+            -p 9292:9292 const84/ui:2.0
 ```
+
+**Второе задание со***
+
+Не получилось полностью выполнить, было лень разбираться с `ruby` и его зависимостями. Пример докерфайла можно посмотреть [здесь](https://github.com/andrius/alpine-ruby/blob/master/Dockerfile-latest).
