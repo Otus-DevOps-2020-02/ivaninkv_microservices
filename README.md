@@ -103,3 +103,10 @@ docker run -d --network=reddit \
 * Запустили базовый `docker-compose` файл
 * Параметризировали `docker-compose` с помощью [`.env`](https://docs.docker.com/compose/environment-variables/#the-env-file) файла
 * Имя проекта `docker-compose` можно задать с помощью опции командной строки [`-p`](https://docs.docker.com/compose/reference/overview/) или с помощью переменной окружения [`COMPOSE_PROJECT_NAME`](https://docs.docker.com/compose/reference/envvars/#compose_project_name).
+
+**Задание со***
+
+* Написан файл `docker-compose.override.yml`
+    * ui, comment запускаются командой `puma --debug -w 2`
+    * post запускается командой с помощью нового скрипта `new_post_app.py` (который является копией оригинального)
+* Продвинутое конфигурирование [docker-compose](https://habr.com/ru/company/otus/blog/337688/)
