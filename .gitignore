@@ -7,3 +7,6 @@
 
 # service account
 docker-275604-8cd22bc2a519.json
+
+# docker-compose
+.env

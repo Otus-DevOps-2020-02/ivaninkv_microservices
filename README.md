@@ -92,3 +92,7 @@ docker run -d --network=reddit \
 **Второе задание со***
 
 Не получилось полностью выполнить, было лень разбираться с `ruby` и его зависимостями. Пример докерфайла можно посмотреть [здесь](https://github.com/andrius/alpine-ruby/blob/master/Dockerfile-latest).
+
+## HW14 Сеть Docker. Docker-compose
+
+**Основное ДЗ**
