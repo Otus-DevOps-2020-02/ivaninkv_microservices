@@ -96,3 +96,10 @@ docker run -d --network=reddit \
 ## HW14 Сеть Docker. Docker-compose
 
 **Основное ДЗ**
+
+* Поэксперементировали с сетями и алиасами сетей
+* Создали 2 сети и запустили в них наше приложение
+* Посмотрели создаваемые правила файервола
+* Запустили базовый `docker-compose` файл
+* Параметризировали `docker-compose` с помощью [`.env`](https://docs.docker.com/compose/environment-variables/#the-env-file) файла
+* Имя проекта `docker-compose` можно задать с помощью опции командной строки [`-p`](https://docs.docker.com/compose/reference/overview/) или с помощью переменной окружения [`COMPOSE_PROJECT_NAME`](https://docs.docker.com/compose/reference/envvars/#compose_project_name).
