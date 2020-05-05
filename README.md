@@ -92,3 +92,21 @@ docker run -d --network=reddit \
 **Второе задание со***
 
 Не получилось полностью выполнить, было лень разбираться с `ruby` и его зависимостями. Пример докерфайла можно посмотреть [здесь](https://github.com/andrius/alpine-ruby/blob/master/Dockerfile-latest).
+
+## HW14 Сеть Docker. Docker-compose
+
+**Основное ДЗ**
+
+* Поэксперементировали с сетями и алиасами сетей
+* Создали 2 сети и запустили в них наше приложение
+* Посмотрели создаваемые правила файервола
+* Запустили базовый `docker-compose` файл
+* Параметризировали `docker-compose` с помощью [`.env`](https://docs.docker.com/compose/environment-variables/#the-env-file) файла
+* Имя проекта `docker-compose` можно задать с помощью опции командной строки [`-p`](https://docs.docker.com/compose/reference/overview/) или с помощью переменной окружения [`COMPOSE_PROJECT_NAME`](https://docs.docker.com/compose/reference/envvars/#compose_project_name).
+
+**Задание со***
+
+* Написан файл `docker-compose.override.yml`
+    * ui, comment запускаются командой `puma --debug -w 2`
+    * post запускается командой с помощью нового скрипта `new_post_app.py` (который является копией оригинального)
+* Продвинутое конфигурирование [docker-compose](https://habr.com/ru/company/otus/blog/337688/)
