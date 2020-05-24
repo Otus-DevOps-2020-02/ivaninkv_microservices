@@ -42,17 +42,21 @@ deploy_dev_job:
 staging:
   stage: stage
   when: manual
+  only:
+    - /^\d+\.\d+\.\d+/
   script:
     - echo 'Deploy'
   environment:
-    name: dev
-    url: http://dev.example.com
+    name: stage
+    url: http://beta.example.com
 
 production:
   stage: production
   when: manual
+  only:
+    - /^\d+\.\d+\.\d+/
   script:
     - echo 'Deploy'
   environment:
-    name: dev
-    url: http://dev.example.com
+    name: production
+    url: http://example.com
