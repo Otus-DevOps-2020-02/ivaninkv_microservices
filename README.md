@@ -129,4 +129,6 @@ docker run -d --network=reddit \
 
 **Задание со***
 
+* Как делать билд контейнеров докер в GitLab описано в [документации](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html). Плюс есть пример в файле к лекции MeetUP.pdf
+* Для автоматизации установки `gitlab-runner` можно использовать готовые `ansible` роли, как например [эта](https://github.com/riemers/ansible-gitlab-runner)
 * Настроена интеграция со [slack](https://devops-team-otus.slack.com/archives/CV8CVA69E)
