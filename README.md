@@ -113,7 +113,7 @@ docker run -d --network=reddit \
     * post запускается командой с помощью нового скрипта `new_post_app.py` (который является копией оригинального)
 * Продвинутое конфигурирование [docker-compose](https://habr.com/ru/company/otus/blog/337688/)
 
-## HW14 Gitlab CI
+## HW15 Gitlab CI
 
 **Основное ДЗ**
 
