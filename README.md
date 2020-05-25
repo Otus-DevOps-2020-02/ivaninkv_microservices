@@ -23,6 +23,8 @@
 
 Команда создания docker-host'а:
 ```
+export GOOGLE_PROJECT=docker-275604
+
 docker-machine create --driver google \
     --google-machine-image https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts \
     --google-machine-type n1-standard-1 \
@@ -110,3 +112,23 @@ docker run -d --network=reddit \
     * ui, comment запускаются командой `puma --debug -w 2`
     * post запускается командой с помощью нового скрипта `new_post_app.py` (который является копией оригинального)
 * Продвинутое конфигурирование [docker-compose](https://habr.com/ru/company/otus/blog/337688/)
+
+## HW15 Gitlab CI
+
+**Основное ДЗ**
+
+* Подняли машину с докером в GCP
+* Установили туда Gitlab CI, gitlab-runner
+* Создали группу проектов, проект
+* Создали пайплайн и зарегистрировали его
+* Добавили исходный код приложения в репозиторий
+* Добавили тест для приложения
+* Описали несколько окружений
+* stage и prod окружения запускаются только тогда, когда проставлен тэг в гите
+* Добавили динамические окружения
+
+**Задание со***
+
+* Как делать билд контейнеров докер в GitLab описано в [документации](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html). Плюс есть пример в файле к лекции MeetUP.pdf
+* Для автоматизации установки `gitlab-runner` можно использовать готовые `ansible` роли, как например [эта](https://github.com/riemers/ansible-gitlab-runner)
+* Настроена интеграция со [slack](https://devops-team-otus.slack.com/archives/CV8CVA69E)
