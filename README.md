@@ -132,3 +132,24 @@ docker run -d --network=reddit \
 * Как делать билд контейнеров докер в GitLab описано в [документации](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html). Плюс есть пример в файле к лекции MeetUP.pdf
 * Для автоматизации установки `gitlab-runner` можно использовать готовые `ansible` роли, как например [эта](https://github.com/riemers/ansible-gitlab-runner)
 * Настроена интеграция со [slack](https://devops-team-otus.slack.com/archives/CV8CVA69E)
+
+## HW16 Monitoring
+
+**Основное ДЗ**
+
+* Создали DockerHost и подняли в нем Prometheus
+* Изучили web-интерфейс Prometheus
+* Создали свой docker-образ Prometheus со своим конфигом
+* Создали `docker-compose.yml` с микросервисами и Prometheus'ом
+* Проверили как работает мониторинг, если останавливать один из компонентов системы
+* Добавили `node-exporter` в нашу конфигурацию, для мониторинга состояния хоста
+* Сслыка на [DockerHub](https://hub.docker.com/u/const84)
+
+**Задание со***
+
+* [Mongo-exporter](https://hub.docker.com/r/bitnami/mongodb-exporter)
+* [Blackbox-exporter](https://github.com/prometheus/blackbox_exporter)
+* Документация по make
+    * [раз](https://www.ibm.com/developerworks/ru/library/l-debugmake/index.html)
+    * [два](https://habr.com/ru/post/132524/)
+    * [три](http://rus-linux.net/nlib.php?name=/MyLDP/algol/gnu_make/gnu_make_3-79_russian_manual.html)
