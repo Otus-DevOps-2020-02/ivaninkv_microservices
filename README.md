@@ -146,3 +146,10 @@ docker run -d --network=reddit \
 * Сслыка на [DockerHub](https://hub.docker.com/u/const84)
 
 **Задание со***
+
+* [Mongo-exporter](https://hub.docker.com/r/bitnami/mongodb-exporter)
+* [Blackbox-exporter](https://github.com/prometheus/blackbox_exporter)
+* Документация по make
+    * [раз](https://www.ibm.com/developerworks/ru/library/l-debugmake/index.html)
+    * [два](https://habr.com/ru/post/132524/)
+    * [три](http://rus-linux.net/nlib.php?name=/MyLDP/algol/gnu_make/gnu_make_3-79_russian_manual.html)

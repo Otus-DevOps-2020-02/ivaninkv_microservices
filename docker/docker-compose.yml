@@ -58,6 +58,14 @@ services:
       - '--path.sysfs=/host/sys'
       - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
 
+  mongodb-exporter:
+    image: bitnami/mongodb-exporter:0.11.0
+    networks:
+      - back_net
+      - front_net
+    ports:
+      - 9216:9216
+
 volumes:
   post_db:
   prometheus_data:
