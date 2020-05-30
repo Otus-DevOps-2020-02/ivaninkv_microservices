@@ -153,3 +153,8 @@ docker run -d --network=reddit \
     * [раз](https://www.ibm.com/developerworks/ru/library/l-debugmake/index.html)
     * [два](https://habr.com/ru/post/132524/)
     * [три](http://rus-linux.net/nlib.php?name=/MyLDP/algol/gnu_make/gnu_make_3-79_russian_manual.html)
+
+
+## HW17 Monitoring 2. Приложение и инфраструктура
+
+**Основное ДЗ**
