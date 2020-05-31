@@ -153,3 +153,15 @@ docker run -d --network=reddit \
     * [раз](https://www.ibm.com/developerworks/ru/library/l-debugmake/index.html)
     * [два](https://habr.com/ru/post/132524/)
     * [три](http://rus-linux.net/nlib.php?name=/MyLDP/algol/gnu_make/gnu_make_3-79_russian_manual.html)
+
+
+## HW17 Monitoring 2. Приложение и инфраструктура
+
+**Основное ДЗ**
+
+* Разделили файл `docker-compose.yml` на 2, отдельно приложение и отдельно мониторинг
+* Добавили [cAdviser](https://github.com/google/cadvisor) для мониторинга Docker контейнеров
+* Добавили `Grafana` для визуализации данных `Prometheus`
+* Настроили несколько дашбордов, визуализирующих как технические, так и бизнес метрики
+* Настроили алертинг при недоступности одного из сервисов в течении 1 минуты
+* Сслыка на [DockerHub](https://hub.docker.com/u/const84)
