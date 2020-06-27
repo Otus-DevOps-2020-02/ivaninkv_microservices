@@ -165,3 +165,25 @@ docker run -d --network=reddit \
 * Настроили несколько дашбордов, визуализирующих как технические, так и бизнес метрики
 * Настроили алертинг при недоступности одного из сервисов в течении 1 минуты
 * Сслыка на [DockerHub](https://hub.docker.com/u/const84)
+
+
+## HW18 Логирование в инфраструктуре Docker
+
+**Основное ДЗ**
+
+* Создали Docker-compose для централизованного логирования (ElasticSearch, Fluentd, Kibana)
+* При запуске инфоаструктуры логирования встретились 2 ошибки
+    * `max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]` - решение [тут](https://github.com/elastic/elasticsearch-docker/issues/92#issuecomment-318086404)
+    * `the default discovery settings are unsuitable for production use; at least one of [discovery.seed_hosts, discovery.seed_providers, cluster.initial_master_nodes] must be configured` - решение добавить в docker-compose-logging девелопер-режим
+    ```
+        environment:
+            - discovery.type=single-node
+    ```
+
+* Добавили в сервис post драйвер `fluentd` для логирования структурированных логов
+* Добавили в сервис ui драйвер `fluentd` для логирования неструктурированных логов
+* В интерфейсе `Kibana` настроили индекс для просмотра логов
+* Посмотрели как `Kibana` отображет логи, попробовали как работает поиск
+* В `ﬂuent.conf` настроили парсер, для парсинга `json` по полям
+* Для несруктурированных логов настроили и проверили парсинг логов через регулярку и grok-шаблон
+* Добавили в инфраструктуру `zipkin` и проверили распределенную трассировку
