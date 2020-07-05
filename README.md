@@ -187,3 +187,24 @@ docker run -d --network=reddit \
 * В `ﬂuent.conf` настроили парсер, для парсинга `json` по полям
 * Для несруктурированных логов настроили и проверили парсинг логов через регулярку и grok-шаблон
 * Добавили в инфраструктуру `zipkin` и проверили распределенную трассировку
+
+## HW19 Kubernetes. The Hard Way
+
+[Инструкция](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+
+**Основное ДЗ**
+
+* Пререквизиты - установили `gcloud` и выполнили аутентификацию, установили дефолтную зону и регион
+* Установили клиентские утилиты [cfssl](https://github.com/cloudflare/cfssl), [cfssljson](https://github.com/cloudflare/cfssl), and [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+* Создали VPC для кластера k8s, правила фаервола, внешний IP. Создали 3 контроллера и 3 воркера.
+* С помощью утилиты `cfssl` сгенерировали сертификат и приватный ключ для авторизации, для каждого воркера, для контроллера, прокси и шедуллера, API-сервера.
+* Сгенерировали конфигурационные файлы для воркеров, kube-proxy, controller-manager, kube-scheduler
+* Сгенерировали ключ и конфиг шифрования, залили их на контроллеры
+* Сконфигурировали и запустили `etcd` на контроллерах
+* Настроили и запустили на контроллерах `kube-apiserver`, `kube-controller-manager`, `kube-scheduler`, `kubectl`
+* Установили и запустили на воркерах `runc`, `container networking plugins`, `containerd`, `kubelet`, `kube-proxy`
+* Сгенерировали `kubeconfig`
+* Настроили правила маршрутизации
+* Установили `DNS add-on` для k8s
+* Создали Deployment `nginx` и протестировали port-forwarding, просмотр логов, выполнение команд на подах
+* Выполнили команду `kubectl apply -f post-deployment.yml` для проверки работоспособности кластера с нашим приложением
