@@ -208,3 +208,7 @@ docker run -d --network=reddit \
 * Установили `DNS add-on` для k8s
 * Создали Deployment `nginx` и протестировали port-forwarding, просмотр логов, выполнение команд на подах
 * Выполнили команду `kubectl apply -f post-deployment.yml` для проверки работоспособности кластера с нашим приложением
+
+## HW20 Kubernetes. Запуск кластера и приложения
+
+* Установили minikube в wsl по [инструкции](https://medium.com/@joaoh82/setting-up-kubernetes-on-wsl-to-work-with-minikube-on-windows-10-90dac3c72fa1)
