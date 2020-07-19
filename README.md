@@ -211,6 +211,12 @@ docker run -d --network=reddit \
 
 ## HW20 Kubernetes. Запуск кластера и приложения
 
+* Установили `kubectl`
 * Установили minikube в wsl по [инструкции](https://medium.com/@joaoh82/setting-up-kubernetes-on-wsl-to-work-with-minikube-on-windows-10-90dac3c72fa1)
-
-* Включение ui на GKE описано [тут](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/). Пропустить теперь нельзя, нужно авторизовываться по конфиг файлу `kubectl`.
+* Ещё два варианта установки `minikube` на GCP, если у вас Win10 Home и нельзя включить Hyper-V ([раз](https://webcache.googleusercontent.com/search?q=cache:errJtcTZ_8EJ:https://itsmetommy.com/2019/09/08/install-minikube-on-gcp-centosos-7/+&cd=5&hl=ru&ct=clnk&gl=ru), [два](https://medium.com/faun/installing-minikube-on-gcp-compute-engine-step-by-step-e8861f0ddc44))
+* Описали Deplyment'ы для наших сервисов (post, comment, ui, mongodb)
+* Описали Service для взаимодействия подов
+* Создали Namespace DEV
+* Развернули все сначала в `minikube`, затем в `GKE`
+* Включение ui на GKE описано [тут](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/). Пропустить теперь нельзя, нужно авторизовываться по конфиг файлу `kubectl`
+* Для корректной проверки ДЗ, необходимо прогнать `*.yml` файлы через утилиту dos2unix
