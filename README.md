@@ -212,3 +212,5 @@ docker run -d --network=reddit \
 ## HW20 Kubernetes. Запуск кластера и приложения
 
 * Установили minikube в wsl по [инструкции](https://medium.com/@joaoh82/setting-up-kubernetes-on-wsl-to-work-with-minikube-on-windows-10-90dac3c72fa1)
+
+* Включение ui на GKE описано [тут](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/). Пропустить теперь нельзя, нужно авторизовываться по конфиг файлу `kubectl`.
